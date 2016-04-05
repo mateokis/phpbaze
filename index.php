@@ -7,7 +7,7 @@
 
 <body>
 <h1>
-    Naslov
+    Automobili
 </h1>
 
 <p>
@@ -17,15 +17,22 @@
 
     if ($result->num_rows > 0) {
         // output data of each row
+        echo('<table>');
         while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - registracija: " . $row["registracija"]. " " . $row["ime"]. "<br>";
+            echo('<tr>');
+            //echo "id: " . $row["id"]. " - registracija: " . $row["registracija"]. " " . $row["ime"]. "<br>";
+            echo('<td>' . $row['id'] . '</td>');
+            echo('<td>' . $row['registracija'] . '</td>');
+            echo('<td>' . $row['ime'] . '</td>');
+            echo('</tr>');
         }
+        echo('</table>');
     } else {
         echo "Nema autombila";
     }
     $conn->close();
     ?>
-    Odlomak
+
 </p>
 </body>
 </html>
