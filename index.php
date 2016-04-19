@@ -24,6 +24,8 @@
             echo('<td>' . $row['id'] . '</td>');
             echo('<td>' . $row['registracija'] . '</td>');
             echo('<td>' . $row['ime'] . '</td>');
+            echo('<td><a href="delete.php?id=' . $row['id'] . '"><img src="trash-delete-16x16.gif"></a></td>');
+            echo('<td><a href="edit.php?id=' . $row['id'] . '"><img src="edit.gif"></a></td>');
             echo('</tr>');
         }
         echo('</table>');
